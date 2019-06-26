@@ -112,6 +112,10 @@ namespace Calculator
                     b = a / float.Parse(textBox1.Text);
                     textBox1.Text = b.ToString();
                     break;
+                case 5:
+                    ///b = Math.Pow(a ,double.Parse(textBox1.Text));
+                    textBox1.Text = Math.Pow(a, double.Parse(textBox1.Text)).ToString();
+                    break;
                 default:
                     break;
             }
@@ -165,6 +169,15 @@ namespace Calculator
         {
             textBox1.Text = "";
             label1.Text = "";
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            a = float.Parse(textBox1.Text);
+            textBox1.Clear();
+            count = 4;
+            label1.Text = a.ToString() + "*";
+            znak = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
